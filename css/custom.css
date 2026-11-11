@@ -1,0 +1,140 @@
+/* ============================================================
+ * 自定义样式（覆盖主题默认值，不需要改 node_modules）
+ * 改完保存，双击 D:\blog\publish.cmd 即可看到效果
+ * 想撤销：把本文件内容清空，或者删掉 scripts/inject-custom-css.js
+ * ============================================================ */
+
+/* ---------- 1. 字体：让中文不再是默认的宋体观感 ---------- */
+body,
+.article-entry,
+.main-nav-link,
+#subtitle,
+#logo {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI",
+    "Microsoft YaHei", "PingFang SC", "Hiragino Sans GB",
+    "Noto Sans SC", sans-serif;
+}
+
+body {
+  color: #3b3b3b;
+}
+
+/* ---------- 2. 正文排版：行高、段距、标题层级 ---------- */
+.article-entry {
+  font-size: 16px;
+  line-height: 1.85;
+}
+
+.article-entry p {
+  margin: 0 0 1.1em;
+}
+
+.article-entry h2 {
+  margin-top: 2.2em;
+  padding-bottom: 0.3em;
+  border-bottom: 1px solid #eee;
+}
+
+.article-entry h3 {
+  margin-top: 1.6em;
+}
+
+/* ---------- 3. 代码：行内代码与代码块 ---------- */
+.article-entry code {
+  background: #f4f6f8;
+  color: #c7254e;
+  padding: 0.15em 0.4em;
+  border-radius: 4px;
+  font-size: 0.9em;
+}
+
+.highlight {
+  border-radius: 8px;
+  overflow: hidden;
+  margin: 1.4em 0;
+}
+
+.highlight table {
+  margin: 0;
+}
+
+/* ---------- 4. 引用、图片、表格 ---------- */
+.article-entry blockquote {
+  margin: 1.4em 0;
+  padding: 0.6em 1em;
+  border-left: 4px solid #258fb8;
+  background: #f8fafb;
+  color: #666;
+}
+
+.article-entry img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 8px;
+  display: block;
+  margin: 1.3em auto;
+}
+
+.article-entry table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 1.3em 0;
+}
+
+.article-entry th,
+.article-entry td {
+  border: 1px solid #e5e5e5;
+  padding: 0.5em 0.8em;
+}
+
+.article-entry th {
+  background: #f7f7f7;
+}
+
+/* ---------- 5. 文章卡片 ---------- */
+.article-inner {
+  border-radius: 10px;
+  border-color: #eee;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.06);
+}
+
+/* ---------- 6. 顶部横幅：压暗一点，让白色标题更清楚 ---------- */
+#banner {
+  background-position: center;
+}
+
+#header:before {
+  height: 100%;
+  background: linear-gradient(180deg, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.45));
+}
+
+/* ---------- 7. 侧栏 ---------- */
+#sidebar .widget {
+  border-radius: 8px;
+}
+
+#sidebar .widget-title {
+  letter-spacing: 0.05em;
+}
+
+/* ---------- 8. 链接 ---------- */
+.article-entry a {
+  color: #0b7ba8;
+}
+
+.article-entry a:hover {
+  color: #085f83;
+  text-decoration: underline;
+}
+
+/* ---------- 9. 手机端 ---------- */
+@media screen and (max-width: 479px) {
+  .article-entry {
+    font-size: 15px;
+    line-height: 1.8;
+  }
+
+  .article-inner {
+    border-radius: 0;
+  }
+}
